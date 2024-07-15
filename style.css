@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url("./fonts/BigShouldersDisplay.ttf") format("woff2-variations");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Big Shoulders Display";
+  background-color: #111;
+  text-transform: uppercase;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section h1 {
+  font-size: 10vw;
+  color: #fff;
+}
+
+.parallax-item__text {
+  font-size: 10vw;
+  z-index: 100;
+}
+
+.parallax-item__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+.parallax-item__img::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+#section01 .parallax-item__img {
+  background-image: url(assets/img1.jpg);
+}
+#section02 .parallax-item__img {
+  background-image: url(assets/img2.jpg);
+}
+#section03 .parallax-item__img {
+  background-image: url(assets/img3.jpg);
+}
+#section04 .parallax-item__img {
+  background-image: url(assets/img4.jpg);
+}
+
+section.marquees {
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  justify-content: center;
+  /* background-color: #fff; */
+}
+
+section.marquees p {
+  font-size: 42px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.marquee-container {
+  position: relative;
+  width: 125%;
+  height: 250px;
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.marquee {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1em;
+}
+
+#marquee-1 .marquee,
+#marquee-3 .marquee {
+  left: -15%;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item.with-text {
+  flex: 1.5;
+}
+
+.item h1 {
+  text-transform: uppercase;
+  font-size: 100px;
+}
+
+
+@media (max-width: 900px) {
+  section.marquees {
+    height: 100vh;
+  }
+
+  .marquee-container {
+    width: 250%;
+    height: 150px;
+  }
+
+  #marquee-2 .marquee,
+  #marquee-4 .marquee {
+    left: -35%;
+  }
+
+  .item.with-text {
+    flex: 1;
+  }
+
+  .item h1 {
+    font-size: 60px;
+  }
+}
