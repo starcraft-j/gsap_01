@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
           : lastCard.offsetTop,
       pin: true,
       pinSpacing: false,
-      markers: true,
+      // markers: true,
     })
   })
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     trigger: ".foot",
     start: "top center",
     scrub: 1,
-    markers: true,
+    // markers: true,
     onUpdate: (self) => {
       let opacityProgress = self.progress;
       footH1.style.opacity = 0 + opacityProgress;
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
           start: "50% bottom",
           end: "top top",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       }
     );
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
           start: "top bottom",
           end: "150% top",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       }
     );
